@@ -44,12 +44,27 @@
   #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
   accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
 
-   ### b.Name Entity Recognition  -
+   ### b. Name Entity Recognition  -
    Named Entity Recognition (NER) is a natural language processing (NLP) technique that focuses on identifying and classifying named entities (i.e.,names, specific objects, places, organizations, dates, 
    quantities, and other proper nouns) within a text.
-   For this purpose we can use models like spaCy or BERT-based models for recognizing entities in the script.
+   For this purpose we can use model like spaCy for recognizing entities in the script.
+
+   #### Install spaCy and Download Language Model:
+    Install spaCy and download a language model. spaCy provides pre-trained models for multiple languages. For English, we can download the en_core_web_sm model, which is a small English language model.
+
+   #### Load the Language Model:
+   Once we've downloaded the language model, load it using spaCy.
+
+   #### Tokenize and Analyze Text:
+   Use the loaded language model to tokenize and analyze text. 
+
+   #### Access Named Entities:
+   Access the named entities found in the text, along with their respective labels
+
+   #### Visualizing NER:
+   Visualise the name entities and their respective labels using displacy library.
    
-   ### c.Sentiment Analysis -
+   ### c. Sentiment Analysis -
    For sentiment analysis we can make use of GloVe (Global Vectors for Word Representation), which is a word embedding technique used in natural language processing (NLP) and machine learning. GloVe vectors
    capture semantic relationships between words based on their co-occurrence patterns in large text corpora. This means that words with similar meanings have similar vector representations. 
 
