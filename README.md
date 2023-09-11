@@ -20,8 +20,8 @@
 ## 4. Video Processing Pipeline:
    We can create a pipeline to carry out the following steps:
    
-   ### a. Generating Script - We can use Automatic Speech Recognition (ASR) models, such as Google's Speech-to-Text API for automatically generating 
-   script out of videos.
+   ### a. Generating Script -
+   We can use Automatic Speech Recognition (ASR) models, such as Google's Speech-to-Text API for automatically generating script out of videos.
    Automatic Speech Recognition (ASR) is a technology that is designed to convert spoken language into text. They are trained on large datasets of spoken language and have
    state-of-the-art accuracy in transcribing audio to text, making them suitable for generating a script from spoken words in videos.
    
@@ -38,22 +38,26 @@
    
   #### To try Speech-to-Text without linking it to our project, we can choose the "TRY THIS API" option. To enable the Speech-to-Text API for use with project, we can click ENABLE.
    
-  #### (Optional) Enable data logging. By opting in to data logging, we allow Google to record any audio data that we send to Speech-to-Text. This data is used to improve the Speech-to-Text models. Users who opt in to data logging benefit from lower pricing.
+  #### (Optional) Enable data logging. By opting in to data logging, we allow Google to record any audio data that we send to Speech-to-Text. This data is used to improve the Speech-to-Text models. Users
+  who opt in to data logging benefit from lower pricing.
    
-  #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service accounts    associated with this project, we can create one by following the instructions in the "creating a new service account" section.
+  #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
+  accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
 
-   ### b.Name Entity Recognition  - Named Entity Recognition (NER) is a natural language processing (NLP) technique that focuses on identifying and classifying
-   named entities (i.e.,names, specific objects, places, organizations, dates, quantities, and other proper nouns) within a text.
+   ### b.Name Entity Recognition  -
+   Named Entity Recognition (NER) is a natural language processing (NLP) technique that focuses on identifying and classifying named entities (i.e.,names, specific objects, places, organizations, dates, 
+   quantities, and other proper nouns) within a text.
    For this purpose we can use models like spaCy or BERT-based models for recognizing entities in the script.
    
-   ### c.Sentiment Analysis -  Foe sentiment analysis the Pre-trained models like transformer-based models can be used.
-   Transformer-based models, like BERT, GPT, and their variants, are deep learning models that use attention mechanisms and neural networks for understanding language. These
-   models have been pre-trained on massive text corpora and they take into account the entire sentence or document when determining sentiments.
+   ### c.Sentiment Analysis -
+   For sentiment analysis the Pre-trained models like transformer-based models can be used. Transformer-based models, like BERT, GPT, and their variants, are deep learning models that use attention 
+   mechanisms and neural networks for understanding language. These models have been pre-trained on massive text corpora and they take into account the entire sentence or document when determining 
+   sentiments.
    
    Why NER & Sentiment Analysis is required- These are required for content categorization, sentiment-based editing, and script analysis.
 
    ### d. Facial Detection- A facial detection model is integrated to identify and mark timestamps when faces are present in the video.
-    OpenCV's pre-trained Haar Cascades, deep learning-based models like Single Shot MultiBox Detector (SSD), or Region-based Convolutional Neural Networks (R-CNNs) can be used for
+   OpenCV's pre-trained Haar Cascades, deep learning-based models like Single Shot MultiBox Detector (SSD), or Region-based Convolutional Neural Networks (R-CNNs) can be used for
    detecting faces in the video.
    Haar Cascade Classifiers, are a machine learning object detection method used to identify objects, detect faces or patterns within images or video. They are trained using machine
    learning techniques, particularly the AdaBoost (Adaptive Boosting) algorithm.
