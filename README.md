@@ -93,17 +93,11 @@
    Why NER & Sentiment Analysis is required- These are required for content categorization, sentiment-based editing, and script analysis.
 
    ### d. Facial Detection-
-   A facial detection model is integrated to identify and mark timestamps when faces are present in the video. OpenCV's pre-trained Haar Cascades, deep learning-based models like Single Shot MultiBox 
-   Detector (SSD), or Region-based Convolutional Neural Networks (R-CNNs) can be used for
-   detecting faces in the video.
+   A facial detection model is integrated to identify and mark timestamps when faces are present in the video. OpenCV's pre-trained Haar Cascades can be used for detecting faces in the video.
    Haar Cascade Classifiers, are a machine learning object detection method used to identify objects, detect faces or patterns within images or video. They are trained using machine
    learning techniques, particularly the AdaBoost (Adaptive Boosting) algorithm.
-   SSD is a single-shot object detection model that efficiently detects objects of various sizes and shapes in real-time and also provide information about their location (bounding
-   boxes) and class labels (e.g., car, person, dog).
-   R-CNN, or Region-based Convolutional Neural Network, is an object detection method in computer vision that uses a combination of region proposals and convolutional neural networks
-   to identify and locate objects within an image.
-
-   For this particular product, we can make use of Haar Cascade Classifiers. Here's the piece of code that we can use for detecting faces in videos:
+   
+   Here's the piece of code that we can use for detecting faces in videos:
    
    ####  Importing the OpenCV library which is used for computer vision tasks like image and video processing.
    import cv2
