@@ -28,20 +28,19 @@
    Google's Speech-to-Text API is a service provided by Google Cloud which can transcribe spoken words from various audio sources, such as audio recordings, live streaming,
    or telephony conversations. We can follow the following steps in order to use Google's Speech-to-Text API for generating script out of videos.
      
-   #### Sign in to Google Cloud console
+   #### *Sign in to Google Cloud console
    
-   #### Go to the project selector page
+   #### *Go to the project selector page
    
-   #### We can either choose an existing project or create a new one
+   #### *We can either choose an existing project or create a new one
    
-  #### If we create a new project, we will be prompted to link a billing account to this project. If we are using a pre-existing project, we need to make sure that the billing is enabled.
+  #### *If we create a new project, we will be prompted to link a billing account to this project. If we are using a pre-existing project, we need to make sure that the billing is enabled.
    
-  #### To try Speech-to-Text without linking it to our project, we can choose the "TRY THIS API" option. To enable the Speech-to-Text API for use with project, we can click ENABLE.
-   
+  #### *To try Speech-to-Text without linking it to our project, we can choose the "TRY THIS API" option. To enable the Speech-to-Text API for use with project, we can click ENABLE.
   #### (Optional) Enable data logging. By opting in to data logging, we allow Google to record any audio data that we send to Speech-to-Text. This data is used to improve the Speech-to-Text models.
   #### Users who opt in to data logging benefit from lower pricing.
    
-  #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
+  #### *We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
   #### accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
 
    ### b. Name Entity Recognition  -
