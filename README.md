@@ -38,8 +38,8 @@
    
   #### To try Speech-to-Text without linking it to our project, we can choose the "TRY THIS API" option. To enable the Speech-to-Text API for use with project, we can click ENABLE.
    
-  #### (Optional) Enable data logging. By opting in to data logging, we allow Google to record any audio data that we send to Speech-to-Text. This data is used to improve the Speech-to-Text models. Users
-  #### who opt in to data logging benefit from lower pricing.
+  #### (Optional) Enable data logging. By opting in to data logging, we allow Google to record any audio data that we send to Speech-to-Text. This data is used to improve the Speech-to-Text models.
+  #### Users who opt in to data logging benefit from lower pricing.
    
   #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
   #### accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
