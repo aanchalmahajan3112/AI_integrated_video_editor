@@ -50,14 +50,36 @@
    For this purpose we can use models like spaCy or BERT-based models for recognizing entities in the script.
    
    ### c.Sentiment Analysis -
-   For sentiment analysis the Pre-trained models like transformer-based models can be used. Transformer-based models, like BERT, GPT, and their variants, are deep learning models that use attention 
-   mechanisms and neural networks for understanding language. These models have been pre-trained on massive text corpora and they take into account the entire sentence or document when determining 
-   sentiments.
+   For sentiment analysis we can make use of GloVe (Global Vectors for Word Representation), which is a word embedding technique used in natural language processing (NLP) and machine learning. GloVe vectors
+   capture semantic relationships between words based on their co-occurrence patterns in large text corpora. This means that words with similar meanings have similar vector representations. 
+
+   To use GloVe vectors for sentiment analysis, we can follow these steps:
+  
+   #### Download GloVe Pre-trained Word Vectors:
+   First, we need to download pre-trained GloVe word vectors. These vectors come in various dimensions (e.g., 50, 100, 200, or 300 dimensions). We can choose the one that suits our needs from the official 
+   GloVe website (https://nlp.stanford.edu/projects/glove/).
+
+   #### Tokenize and Preprocess Text:
+   We can use libraries like nltk or spaCy for tokenization and cleaning. Tokenization involves - Punctuation Handling, Stop Word Removal, Removal of hyperlinks, Stemming and Lemmatization, and much more.
+   
+   #### Load GloVe Word Vectors:
+   We can load glove word vectors to convert word into vectors.
+
+   #### Convert text into Vectors:
+   We can define a function which converts text into vectors by using numpy library. 
+
+   #### Train the model:
+   Train the model using different machine learning algorithms. Tests different algorithms and select the one providing for highest accuracy.
+
+   #### Predict Sentiment:
+   Use the saved model to make the predictions on unseen data.
+   
    
    Why NER & Sentiment Analysis is required- These are required for content categorization, sentiment-based editing, and script analysis.
 
-   ### d. Facial Detection- A facial detection model is integrated to identify and mark timestamps when faces are present in the video.
-   OpenCV's pre-trained Haar Cascades, deep learning-based models like Single Shot MultiBox Detector (SSD), or Region-based Convolutional Neural Networks (R-CNNs) can be used for
+   ### d. Facial Detection-
+   A facial detection model is integrated to identify and mark timestamps when faces are present in the video. OpenCV's pre-trained Haar Cascades, deep learning-based models like Single Shot MultiBox 
+   Detector (SSD), or Region-based Convolutional Neural Networks (R-CNNs) can be used for
    detecting faces in the video.
    Haar Cascade Classifiers, are a machine learning object detection method used to identify objects, detect faces or patterns within images or video. They are trained using machine
    learning techniques, particularly the AdaBoost (Adaptive Boosting) algorithm.
@@ -68,50 +90,49 @@
 
    For this particular product, we can make use of Haar Cascade Classifiers. Here's the piece of code that we can use for detecting faces in videos:
    
-   ###  Importing the OpenCV library which is used for computer vision tasks like image and video processing.
+   ####  Importing the OpenCV library which is used for computer vision tasks like image and video processing.
    import cv2
 
-  ###  We can create an instance of the CascadeClassifier class from OpenCV, which is pre-trained for face detection using Haar cascades. It loads the XML file containing the trained
-   ###  model for frontal face detection.
+  ####  We can create an instance of the CascadeClassifier class from OpenCV, which is pre-trained for face detection using Haar cascades. It loads the XML file containing the trained
+   ####  model for frontal face detection.
    facescascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
    
-   ### Here, a VideoCapture object is created to open and read frames from the video file
+   #### Here, a VideoCapture object is created to open and read frames from the video file
    cap = cv2.VideoCapture('file_name.mp4')
    
-   ###  We can start an infinite loop to continuously process video frames until the user decides to exit.
+   ####  We can start an infinite loop to continuously process video frames until the user decides to exit.
    while True:
-   ### Read a frame from the video
+   #### Read a frame from the video
    success, img = cap.read()
     
-   ### Convert the frame to grayscale for face detection. Face detection is often performed on grayscale images because it simplifies processing.
+   #### Convert the frame to grayscale for face detection. Face detection is often performed on grayscale images because it simplifies processing.
    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
-   ### Detects faces in the grayscale frame using the detectMultiScale method of the facescascade classifier. The parameters 1.1 and 4 control the sensitivity and accuracy of detection.
+   #### Detects faces in the grayscale frame using the detectMultiScale method of the facescascade classifier. The parameters 1.1 and 4 control the sensitivity and accuracy of detection.
    faces = facescascade.detectMultiScale(gray, 1.1, 4)
     
-   ### Starts a loop to iterate through the detected faces. For each detected face, it provides the coordinates (x, y) of the top-left corner of the bounding box and the width (w) and ###height (h) of the bounding box.
+   #### Starts a loop to iterate through the detected faces. For each detected face, it provides the coordinates (x, y) of the top-left corner of the bounding box and the width (w) and ###height (h) of the bounding box.
    for (x, y, w, h) in faces:
       cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
     
-   ### Display the frame with detected faces
+   #### Display the frame with detected faces
    cv2.imshow('Video', img)
     
-   ### Wait for a key press and check if the user pressed 'Esc'. If the 'Esc' key is pressed, the loop is terminated, and the program exits.
+   #### Wait for a key press and check if the user pressed 'Esc'. If the 'Esc' key is pressed, the loop is terminated, and the program exits.
    k = cv2.waitKey(1) & 0xff
    if k == 27:
       break
 
-   ### Release the video capture object and close the OpenCV window
+   #### Release the video capture object and close the OpenCV window
    cap.release()
    cv2.destroyAllWindows()
 
-   
-   
-
-   ### e.Video editing- For video editing tasks like cropping, concatenation, and special effects, we can use FFmpeg. FFmpeg is a powerful and widely used multimedia framework with a range
-   of video processing capabilities. It's highly efficient and well-suited for batch video editing tasks.
+   ### e.Video editing -
+   For video editing tasks like cropping, concatenation, and special effects, we can use FFmpeg. FFmpeg is a powerful and widely used multimedia framework with a range of video processing capabilities. It's
+   highly efficient and well-suited for batch video editing tasks.
 
  
-## 6. Integrate all models and Deploy-  Integrate all the models and deploy it on the cloud plaforms like AWS, Heroku or Azure.
+## 6. Integrate all models and Deploy - 
+Integrate all the models and deploy it on the cloud plaforms like AWS, Heroku or Azure.
 
 
