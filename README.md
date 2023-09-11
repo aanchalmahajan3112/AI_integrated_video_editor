@@ -136,7 +136,7 @@
    cap.release()
    cv2.destroyAllWindows()
 
-   ### e.Video editing -
+   ### e. Video editing -
    For video editing tasks like cropping, concatenation, and special effects, we can use FFmpeg. FFmpeg is a powerful and widely used multimedia framework with a range of video processing capabilities. It's
    highly efficient and well-suited for batch video editing tasks.
 
