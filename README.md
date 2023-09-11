@@ -49,8 +49,52 @@
    R-CNN, or Region-based Convolutional Neural Network, is an object detection method in computer vision that uses a combination of region proposals and convolutional neural networks
    to identify and locate objects within an image.
 
+   For this particular product, we can make use of Haar Cascade Classifiers. Here's the piece of code that we can use for detecting faces in videos:
+   
+   #  Importing the OpenCV library which is used for computer vision tasks like image and video processing.
+   import cv2
+
+   #  We can create an instance of the CascadeClassifier class from OpenCV, which is pre-trained for face detection using Haar cascades. It loads the XML file containing the trained
+   #  model for frontal face detection.
+   facescascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+   
+   # Here, a VideoCapture object is created to open and read frames from the video file
+   cap = cv2.VideoCapture('file_name.mp4')
+   
+   #  We can start an infinite loop to continuously process video frames until the user decides to exit.
+   while True:
+   # Read a frame from the video
+   success, img = cap.read()
+    
+   # Convert the frame to grayscale for face detection. Face detection is often performed on grayscale images because it simplifies processing.
+   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+   # Detects faces in the grayscale frame using the detectMultiScale method of the facescascade classifier. The parameters 1.1 and 4 control the sensitivity and accuracy of detection.
+   faces = facescascade.detectMultiScale(gray, 1.1, 4)
+    
+   # Starts a loop to iterate through the detected faces. For each detected face, it provides the coordinates (x, y) of the top-left corner of the bounding box and the width (w) and #height (h) of the bounding box.
+   for (x, y, w, h) in faces:
+      cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+    
+   # Display the frame with detected faces
+   cv2.imshow('Video', img)
+    
+   # Wait for a key press and check if the user pressed 'Esc'. If the 'Esc' key is pressed, the loop is terminated, and the program exits.
+   k = cv2.waitKey(1) & 0xff
+   if k == 27:
+      break
+
+   # Release the video capture object and close the OpenCV window
+   cap.release()
+   cv2.destroyAllWindows()
+
+   
+   
+
    e.Video editing- For video editing tasks like cropping, concatenation, and special effects, we can use FFmpeg. FFmpeg is a powerful and widely used multimedia framework with a range
    of video processing capabilities. It's highly efficient and well-suited for batch video editing tasks.
 
 
 6. Integrate all models and Deploy-  Integrate all the models and deploy it on the cloud plaforms like AWS, Heroku or Azure
+
+
