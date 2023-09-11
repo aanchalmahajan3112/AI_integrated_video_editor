@@ -102,8 +102,8 @@
    ####  Importing the OpenCV library which is used for computer vision tasks like image and video processing.
    import cv2
 
-  ####  We can create an instance of the CascadeClassifier class from OpenCV, which is pre-trained for face detection using Haar cascades. It loads the XML file containing the trained
-   ####  model for frontal face detection.
+  ####  We can create an instance of the CascadeClassifier class from OpenCV, which is pre-trained for face detection using Haar cascades. It loads the XML file containing the trained model for frontal face 
+  #### detection.
    facescascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
    
    #### Here, a VideoCapture object is created to open and read frames from the video file
