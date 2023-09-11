@@ -42,7 +42,7 @@
   #### who opt in to data logging benefit from lower pricing.
    
   #### We now must link one or more service accounts to the Speech-to-Text API. Click on the Credentials menu item on the left side of the Speech-to-Text API main page. If we do not have any service
-  accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
+  #### accounts associated with this project, we can create one by following the instructions in the "creating a new service account" section.
 
    ### b. Name Entity Recognition  -
    Named Entity Recognition (NER) is a natural language processing (NLP) technique that focuses on identifying and classifying named entities (i.e.,names, specific objects, places, organizations, dates, 
