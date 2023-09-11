@@ -120,7 +120,7 @@
    #### Detects faces in the grayscale frame using the detectMultiScale method of the facescascade classifier. The parameters 1.1 and 4 control the sensitivity and accuracy of detection.
    faces = facescascade.detectMultiScale(gray, 1.1, 4)
     
-   #### Starts a loop to iterate through the detected faces. For each detected face, it provides the coordinates (x, y) of the top-left corner of the bounding box and the width (w) and ###height (h) of the bounding box.
+   #### Starts a loop to iterate through the detected faces. For each detected face, it provides the coordinates (x, y) of the top-left corner of the bounding box and the width (w) and height (h) of the bounding box.
    for (x, y, w, h) in faces:
       cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
     
