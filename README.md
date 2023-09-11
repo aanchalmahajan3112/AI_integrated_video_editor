@@ -50,7 +50,7 @@
    For this purpose we can use model like spaCy for recognizing entities in the script.
 
    #### Install spaCy and Download Language Model:
-    Install spaCy and download a language model. spaCy provides pre-trained models for multiple languages. For English, we can download the en_core_web_sm model, which is a small English language model.
+   Install spaCy and download a language model. spaCy provides pre-trained models for multiple languages. For English, we can download the en_core_web_sm model, which is a small English language model.
 
    #### Load the Language Model:
    Once we've downloaded the language model, load it using spaCy.
