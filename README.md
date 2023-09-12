@@ -140,7 +140,7 @@
    highly efficient and well-suited for batch video editing tasks.
 
  
-## 6. Integrate all models and Deploy - 
+## 5. Integrate all models and Deploy - 
 Integrate all the models and deploy it on the cloud plaforms like AWS, Heroku or Azure.
 
 
